@@ -66,3 +66,11 @@ ggplot(dat) +
 
 ```
 
+# Ranking schools by Return-on-investment
+
+If we use salary after 10 years over school tuition as a proxy for return on investment, what is the highest ROI for schools whose rankings are among the top 100?
+
+```{r, results='asis'}
+knitr::kable(dat[rank_order <= 100][order(-roi)])
+```
+
